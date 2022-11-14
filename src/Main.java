@@ -16,7 +16,6 @@ public class Main {
         while (!queue.isEmpty()) {
             Person person = queue.poll();
             int start = person.getTickets();
-            if (start != 0) {
                 person.setTickets(start - 1);
                 System.out.println(person.getName() + " " + person.getSurname() + " прокатился на аттракционе. Осталось билетов " + person.getTickets());
                 if (person.getTickets() != 0) {
@@ -24,7 +23,8 @@ public class Main {
                 }
             }
         }
-    }
+
+
 
     private static List<Person> generateClients() {
         LinkedList<Person> clients = new LinkedList<>();
